@@ -1,0 +1,14 @@
+<h1>Awesome expensive flats</h1>
+<div class="grid">
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) do %>
+    <div class="card">
+      <h4><%= flat.name %></h4>
+      <p><%= flat.address %></p>
+      <p><%= flat.description.truncate(20) %></p>
+      <p><%= flat.price_per_night %></p>
+      <p><%= flat.number_of_guests %></p>
+    </div>
+    <% end %>
+  <% end %>
+</div>
